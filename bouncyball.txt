@@ -1,0 +1,20 @@
+#include <iostream>
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+ //code
+ int t;
+ cin>>t;
+ while(t--){
+ long long int h;
+ cin>>h;
+ long long int height=2*h;
+ while(h>0){
+ long long newheight = h/2;
+ height = height + 2*newheight;
+ h = newheight;
+ }
+ cout<<height<<endl;
+ }
+ return 0;
+}
