@@ -1,0 +1,36 @@
+#include <iostream>
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	//code
+	int t;
+	cin>>t;
+	while(t--){
+	    string str;
+	    cin>>str;
+	    int strlen = str.length();
+	    int i=0,count[26]={0},x;
+	    while(str[i] !='\0'){
+	        if(str[i]>='a' && str[i]<='z'){
+	            x=str[i]-'a';
+	            count[x]++;
+	        }
+	        i++;
+	    }
+	    
+	    int len=0;
+	    for(int i=0;i<26;i++){
+	        if(count[i] > 1){
+	            cout<<"0"<<endl;
+	            break;
+	        }
+	        else if(count[i]==1){
+	            len++;
+	        }
+	    }
+	   
+	    if(len==strlen) cout<<"1"<<endl;
+	}
+	return 0;
+}
